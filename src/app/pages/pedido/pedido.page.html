@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Seu Pedido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-divider color="medium">
+    <ion-label>
+      <h2>Bolo Escolhido</h2>
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-item-divider>
+    <ion-label color="dark">
+      {{item.nome}}
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-item-divider color="medium">
+    <ion-label>
+      <h2>Dados para entrega</h2>
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-item-divider>
+    <ion-label color="dark">Nome</ion-label>
+    <ion-input [(ngModel)]="pedido.nome"></ion-input>
+  </ion-item-divider>
+
+  <ion-item-divider>
+      <ion-label color="dark" >Telefone</ion-label>
+      <ion-input [(ngModel)]="pedido.telefone"></ion-input>
+  </ion-item-divider>
+
+  <ion-item-divider>
+      <ion-label color="dark" >Endereço</ion-label>
+      <ion-input [(ngModel)]="pedido.endereco"></ion-input>
+  </ion-item-divider>
+
+  <ion-button expand="block" (click)="salvaPedido(item.nome)">Confirmar Pedido</ion-button>
+  <ion-button [routerLink]="['/lista-pedidos']" expand="block" color="danger">Listar Todos os Pedidos</ion-button>
+</ion-content>

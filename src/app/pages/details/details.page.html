@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{bolo?.nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="bolo?.imagem" />
+
+    <ion-card-content>
+      Um dos nossos deliciosos bolos, feito com carinho e especialmente para você, que gosta do que há de melhor no ramo
+      da confeitaria!
+    </ion-card-content>
+    <ion-button expand="block" (click)="adcionarCarrinho()">Pedir esse bolo agora</ion-button>
+    <!-- <ion-button expand="block" [routerLink]="['/pedido', bolo['id_fire']]">Pedir esse bolo agora</ion-button> -->
+  </ion-card>
+</ion-content>

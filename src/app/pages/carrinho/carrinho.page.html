@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>carrinho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let bolo of carrinho">
+      <ion-avatar slot="start">
+        <img src="{{ bolo?.imagem }}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ bolo?.nome }}</h2>
+        <p>{{ bolo?.descricao }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="confirmar()">Confirmar pedido</ion-button>
+</ion-content>

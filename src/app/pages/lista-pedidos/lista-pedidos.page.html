@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Lista de Pedidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >  
+    <ion-item *ngFor(let pedido of Pedidos)>
+      <ion-label>
+        <h2>Nome: {{ pedido.nome }}</h2>
+        <h2>Telefone: {{ pedido.telefone }}</h2>
+        <h2>Endereço: {{ pedido.endereco }}</h2>
+        <h2>Bolo Escolhido: {{ pedido.nomeBolo }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
